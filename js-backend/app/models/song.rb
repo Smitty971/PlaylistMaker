@@ -1,3 +1,3 @@
 class Song < ApplicationRecord
-    has_many :songs
+    belongs_to :list
 end
