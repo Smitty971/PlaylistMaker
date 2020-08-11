@@ -8,7 +8,7 @@
     <!-- //subject to review -->
 </head>
 <body>
-    <!-- Ask about the form id and form-group being added -->
+    <!-- Song Form -->
     <div class="container">
         <h1>Playlist Maker</h1>
         <form id="new-song-form">
@@ -18,11 +18,16 @@
             <div class="form-group">
                 <input type="text" class="form-control" id="artists" placeholder="Your artists name here">
             </div>
-        </form>
-        <div id="song-contianer">
-            
-        </div>
-
-    </div>  
+            <div id="song-contianer">
+            </div>
+            <button type="submit" class="btn btn-success">&#9835;Save This Song&#9835;</button>
+    </form>
+    </div> 
+    <!-- End Song Form -->
+    <script src="src/adapters/ListsAdapter.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/components/lists.js"></script>
+    <script src="src/index.js"></script>
 </body>
+
 </html>
