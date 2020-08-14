@@ -1,5 +1,6 @@
 class App {
     constructor() {
-        this.lists = new ListAdapter()
+        this.lists = new Lists();
+        this.songs = new Songs();
     }
 }
