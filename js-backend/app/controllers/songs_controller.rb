@@ -1,32 +1,33 @@
 class SongsController < ApplicationController
-    def index 
-        @songs = Song.all
-
-        render json: @songs, status: 200
+    def index
+      @song = Song.all 
+      render json: SongSerializer.new(@songs), status: 200
     end
-
-    def show 
-        @song = Song.find(params[:id])
-
-        render json: @song, status: 200
+  
+    def show
+        render json: SongSerializer.new(@song), status: 200
     end
-
-    def create 
-        @song = Song.create(song_params)
-
-        render json: @song, status: 200
+  
+    def create
+      @song = Song.new(song_params)
+      if @song.save
+        render json: SongSerializer.new(@song), status: 200
+      else
+        render json: @song.errors, status: :unprocessable_entity
+      end
     end
-
+  
     def destroy
-        @song = Song.find(params[:id])
-        @song.delete
-
-        render json: {songId: @song.id}
+      @song = Song.find(params[:id])
+      @song.destroy
     end
-
-
-    private
+  
+  private
+  
     def song_params
-        params.require(:song).permit(:artist, :name)
+      params.require(:song).permit(:artist, :title, :list_id)
     end
+  
+
+  
 end
