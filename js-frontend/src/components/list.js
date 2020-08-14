@@ -1,6 +1,6 @@
 class List{
     constructor(listJSON) {
-        this.id = listJSON.id
-        this.title = listJSON.title
+        this.id = listJSON.attributes.id
+        this.title = listJSON.attributes.title
     }
 }
