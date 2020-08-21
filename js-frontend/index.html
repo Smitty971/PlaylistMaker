@@ -12,27 +12,39 @@
     <div class="container">
         <h1>Playlist Maker</h1>
         <form id="songForm">
-            <div class="form=group">
-                <input type="text" class="form-control" id="songName" placeholder="Name of your song">
+            <div class="form-group">
+                <input type="text" class="form-control" id="songTitle" placeholder="Name of your song">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="artists" placeholder="Your artists name here">
+                <input type="text" class="form-control" id="songArtists" placeholder="Your artists name here">
             </div>
             <!-- dropdown menu -->
             <div class="form-group">
                     <select id="ListControlSelect" class="form-control">
                       <option selected>Pick a Genre to add your song too..</option>
                     </select>
-                  </div>  
+                  </div> 
+            <!-- End DropDown -->
             <button type="submit" class="btn btn-success">&#9835;Save This Song&#9835;</button>
-            <div id="song-contianer">
-                </div>
-    </form>
+        </form>
     </div> 
     <!-- End Song Form -->
+
+    <!-- song cards -->
+    <div class="row">
+        <div class="col-lg-12">
+        <div id="song-container"></div>
+        </div>
+    </div>
+    <!-- end song cards -->
+
+
     <script src="src/components/list.js"></script>
     <script src="src/components/lists.js"></script>
+    <script src="src/components/song.js"></script>
+    <script src="src/components/songs.js"></script>
     <script src="src/components/app.js"></script>
+    <script src="src/adapters/SongAdapter.js"></script>
     <script src="src/adapters/ListAdapter.js"></script>
     <script src="src/index.js"></script>
 </body>

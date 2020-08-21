@@ -1,6 +1,6 @@
 class Songs{
     constructor(){
-        this.songs =[]
+        this.songs = []
         this.adapter = new SongAdapter();
         this.fetchAndLoadSongs();
         this.initBindingsAndEventListeners();
@@ -10,25 +10,25 @@ class Songs{
         this.songContainer = document.getElementById("song-container");
         this.newSongTitle = document.querySelector(".form-group #songTitle");
         this.newSongArtist = document.querySelector(".form-group #songArtists");
-        this.dropdownContainer = document.querySelector(".form-group # ListControlSelect");
-        this.songForm = document.getElementById("strainForm");
+        this.dropdownContainer = document.querySelector(".form-group #ListControlSelect");
+        this.songForm = document.getElementById("songForm");
         this.songForm.addEventListener("submit", this.createCard.bind(this));
         this.songContainer.addEventListener('click', e => this.deleteCard(e.target.id))
     }
 
     fetchAndLoadSongs(){
-        this.adapter
+        this.adapter 
         .getSongs()
         .then(songs => {
-            songs.data.foreach(song =>
-                this.songs.push(new Songs(song))
-                );
+            songs.data.forEach(song =>
+              this.songs.push(new Song(song))
+          );
         })
         .then(() => {
-
-            this.render();
+    
+          this.render();
         });
-    }
+      }
 
     createCard(e) {
         e.preventDefault();
@@ -55,7 +55,7 @@ class Songs{
     }
 
     render() {
-        this.songContainer.innerHTML = this.strains
+        this.songContainer.innerHTML = this.songs
         .map(song => song.renderCard())
         .join("");
     }

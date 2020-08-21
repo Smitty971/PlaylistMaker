@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
     def index
-      @song = Song.all 
+      @songs = Song.all 
       render json: SongSerializer.new(@songs), status: 200
     end
   

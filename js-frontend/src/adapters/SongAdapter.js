@@ -8,7 +8,7 @@ class SongAdapter {
     }
 
     createSong(artist, title, listId) {
-        const Song = {
+        const song = {
             artist: artist,
             title: title,
             list_id: listId
@@ -25,7 +25,7 @@ class SongAdapter {
     }
 
     deleteSong(id) {
-        return fetch(`${this.baseUrl}/${id}`, {
+        return fetch(`${this.baseURL}/${id}`, {
             method: 'DELETE', 
             headers: {
                 'content-type': 'application/json'
@@ -33,6 +33,5 @@ class SongAdapter {
             body: JSON.stringify({ "id": id })
         })
     }
-
 }
 
