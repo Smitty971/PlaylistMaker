@@ -31,5 +31,4 @@ class Lists{
       render(){
         this.lists.forEach(list => this.listInput(list))
       }
-    
 }
