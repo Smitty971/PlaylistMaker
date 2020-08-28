@@ -2,8 +2,7 @@ This was built for Flatiron School as a module 4 JS-Rails Project. This is a SPA
 
   
 
-PlayListMaker is for people who want to make music playlists based on the genre of the music. For now it only contains a few genres but more may be added in the future.![screenshot
-](file:///Users/jamalturner/Desktop/Screen%20Shot%202020-08-21%20at%2012.26.42%20PM.png)
+PlayListMaker is for people who want to make music playlists based on the genre of the music. For now it only contains a few genres but more may be added in the future.![working app](https://ibb.co/gPFWHvF)
 
   
 ## Instructions
