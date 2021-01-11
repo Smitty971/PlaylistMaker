@@ -14,7 +14,6 @@ class Songs{
         this.songForm = document.getElementById("songForm");
         this.songForm.addEventListener("submit", this.createCard.bind(this));
         this.songContainer.addEventListener('click', e => this.deleteCard(e.target.id))
-        
     }
 
     fetchAndLoadSongs(){
@@ -60,7 +59,6 @@ class Songs{
         .map(song => song.renderCard())
         .join("");
     }
-
 
     
 
